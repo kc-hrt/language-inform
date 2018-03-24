@@ -1,0 +1,63 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+'scopeName': 'source.inform'
+'name': 'InForm'
+'fileTypes': [
+  'txt'
+  'null'
+]
+'firstLineMatch': '\\*\\$Revision: :'
+'patterns': [
+  {
+    'comment': 'Single line comment'
+    'name': 'comment'
+    'match': '\\*[^\\n\\r]*[\\n\\r]'
+  }
+  {
+    'comment': 'Character location'
+    'name': 'charLoca'
+    'match': '\\@\\d{1,3}'
+  }
+  {
+    'comment': 'Close BC'
+    'name': 'closeBC'
+    'match': '\'<\\/BC>\''
+  }
+  {
+    'comment': 'Open BC'
+    'name': 'openBC'
+    'match': '\'<BC:[^;]*;[^;]*\''
+  }
+  {
+    'comment': 'single quotes'
+    'name': 'singleQuote'
+    'match': '\'[^;]*\''
+  }
+  {
+    'comment': 'Line Definition'
+    'name': 'lineDef'
+    'match': '\\[[^;]*\\]'
+  }
+
+  {
+    'comment': 'File Definitions'
+    'name': 'fileDef'
+    'match': '\\#[^;]*'
+  }
+  {
+    'comment': 'close line with ;'
+    'name': 'closeLine'
+    'match': ';\n'
+  }
+  {
+    'comment': 'matches constants'
+    'name': 'matchConst'
+    'match': 'const'
+  }
+  {
+    'comment': 'define number'
+    'name': 'varNum'
+    'match': '\\(\\d{1,10}\\)'
+  }
+]

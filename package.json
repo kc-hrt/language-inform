@@ -1,0 +1,14 @@
+{
+  "name": "language-inform",
+  "version": "0.0.1",
+  "description": "A short description of your language package",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/kc-hrt/language-inform",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
